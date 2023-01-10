@@ -5,6 +5,8 @@
   align-items: center;
   padding: 6rem;
   min-height: 100vh;
+  font-family: var(--font-mono);
+  gap: 1rem;
 }
 
 .description {
@@ -39,6 +41,10 @@
   font-family: var(--font-mono);
 }
 
+.large {
+  font-size: 6rem;
+}
+
 .grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(25%, auto));
@@ -52,6 +58,8 @@
   background: rgba(var(--card-rgb), 0);
   border: 1px solid rgba(var(--card-border-rgb), 0);
   transition: background 200ms, border 200ms;
+  max-width: 47rem;
+  min-width: 47rem;
 }
 
 .card span {
@@ -69,7 +77,17 @@
   opacity: 0.6;
   font-size: 0.9rem;
   line-height: 1.5;
-  max-width: 30ch;
+  /* max-width: 30ch; */
+}
+
+.card li {
+  margin-left: 1rem;
+}
+
+.card .inform {
+  font-size: .8rem;
+  opacity: 0.5;
+  margin: 0.6rem;
 }
 
 .center {
@@ -107,6 +125,16 @@
 .logo,
 .thirteen {
   position: relative;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  padding: 2rem;
+  font-family:var(--font-mono);
+  opacity: 0.6;
 }
 
 .thirteen {
@@ -175,7 +203,7 @@
 
 /* Mobile */
 @media (max-width: 700px) {
-  .content {
+  .main {
     padding: 4rem;
   }
 
@@ -187,7 +215,10 @@
   }
 
   .card {
-    padding: 1rem 2.5rem;
+    padding: 1rem 1rem;
+    margin-block: 1rem;
+    background-color: rgba(190,190,190,.2);
+    min-width: 90vw;
   }
 
   .card h2 {

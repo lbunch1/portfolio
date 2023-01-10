@@ -18,7 +18,7 @@ export default function Home() {
         <h1 className={styles.large}>Logan Bunch</h1>
         <h2>Front-end Web Developer</h2>
         <br />
-        <a href="https://smhsclassof1970.com/" target="_blank" className={styles.card}>
+        <a href="https://smhsclassof1970.com/" target="_blank" rel="noreferrer" className={styles.card}>
           <h2>
             San Marino High School Class of 1970
           </h2>
@@ -32,7 +32,7 @@ export default function Home() {
             <li>Supabase(for authentication)</li>
           </ul>
         </a>
-        <a href="https://github.com/lbunch1/qa-dashboard" target="_blank" className={styles.card}>
+        <a href="https://github.com/lbunch1/qa-dashboard" target="_blank" rel="noreferrer" className={styles.card}>
           <h2>Quality Assurance Data Tracker</h2>
           <p>A portal designed for daily data input, documentation output, data analysis, and a wiki containing informative articles pertaining to the quality assurance department.</p>
           <h4>Technologies used:</h4>
@@ -43,7 +43,7 @@ export default function Home() {
           </ul>
           <p className={styles.inform}>*Link directs to source code as the tool is linked to a database containing proprietary information*</p>
         </a>
-        <a href="https://anothermcguffin.com" target="_blank" className={styles.card}>
+        <a href="https://anothermcguffin.com" target="_blank" rel="noreferrer" className={styles.card}>
           <h2>Another Mcguffin - Band Website</h2>
           <p>A single page website to showcase a small band and link to their socials.</p>
           <h4>Technologies used:</h4>
@@ -52,7 +52,7 @@ export default function Home() {
             <li>Tailwindcss</li>
           </ul>
         </a>
-        <a href="https://lbunch1.github.io/final-project/" target="_blank" className={styles.card}>
+        <a href="https://lbunch1.github.io/final-project/" target="_blank" rel="noreferrer" className={styles.card}>
           <h2>Analogue Insights - Art Gallery</h2>
           <p>A faux art gallery website featuring entirely A.I. generated art, artists and text content. Submitted as a final project for university web developement course.</p>
           <h4>Technologies used:</h4>

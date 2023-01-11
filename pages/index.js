@@ -2,10 +2,35 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { Inter } from '@next/font/google'
 import styles from '../styles/Home.module.css'
+import { useEffect, useState } from 'react'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
+
+  const [theme, setTheme] = useState('dark')
+
+  useEffect(() => {
+    if (!localStorage.theme) {
+      localStorage.setItem('theme', 'dark')
+    }
+    const body = document.querySelector('body')
+    if (localStorage.theme === "dark") {
+      body.classList.add('dark-mode')
+    } else if (localStorage.theme === "light") {
+      body.classList.remove('dark-mode')
+    }
+  }, [])
+
+  function toggleTheme() {
+    (localStorage.theme === "dark") ?
+      localStorage.setItem('theme', 'light') :
+      localStorage.setItem('theme', 'dark')
+    const body = document.querySelector('body')
+    body.classList.toggle('dark-mode')
+    theme === 'dark' ? setTheme('light') : setTheme('dark')
+  }
+
   return (
     <>
       <Head>
@@ -15,9 +40,14 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
+        <button onClick={toggleTheme} className={styles.theme}>
+          {theme === 'light' ? '☼' : '☽'}
+        </button>
         <h1 className={styles.large}>Logan Bunch</h1>
         <h2>Front-end Web Developer</h2>
         <br />
+        <div className={styles.snippet}>
+          Logan is a front-end web developer with an itch to learn. He has chosen to work primarily with Nextjs due to its ability impliment strong back-end features without the need for independently hosted back-end systems. He is capable of applying styles via Tailwindcss or plain css.<br /><br />Logan is also an avid user of free and open source software. As his skills develop, he looks forward to contributing to many projects in the future.</div>
         <a href="https://smhsclassof1970.com/" target="_blank" rel="noreferrer" className={styles.card}>
           <h2>
             San Marino High School Class of 1970

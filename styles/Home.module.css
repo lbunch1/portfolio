@@ -52,14 +52,21 @@
   max-width: 100%;
 }
 
+.snippet {
+  background: linear-gradient(156deg, #0048b5, #cc007e);
+  width: 47rem;
+  padding: 2rem;
+  border-radius: 5rem;
+  color: white;
+}
+
 .card {
   padding: 1rem 1.2rem;
   border-radius: var(--border-radius);
   background: rgba(var(--card-rgb), 0);
   border: 1px solid rgba(var(--card-border-rgb), 0);
   transition: background 200ms, border 200ms;
-  max-width: 47rem;
-  min-width: 47rem;
+  width: 47rem;
 }
 
 .card span {
@@ -88,6 +95,19 @@
   font-size: .8rem;
   opacity: 0.5;
   margin: 0.6rem;
+}
+
+.theme {
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin: 1.5rem;
+  background: none;
+  border: none;
+  color: rgb(var(--foreground-rgb));
+  cursor: pointer;
+  font-size: 2rem;
+  font-weight: bold;
 }
 
 .center {
@@ -214,11 +234,15 @@
     text-align: center;
   }
 
+  .snippet {
+    max-width: 90vw;
+  }
+
   .card {
     padding: 1rem 1rem;
     margin-block: 1rem;
     background-color: rgba(190,190,190,.2);
-    min-width: 90vw;
+    max-width: 90vw;
   }
 
   .card h2 {

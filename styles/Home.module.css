@@ -99,15 +99,19 @@
 
 .theme {
   position: fixed;
-  top: 0;
+  bottom: 0;
   right: 0;
-  margin: 1.5rem;
-  background: none;
+  margin: 1rem;
+  background-color: rgb(var(--foreground-rgb));
   border: none;
-  color: rgb(var(--foreground-rgb));
+  color: rgb(var(--background-start-rgb));
   cursor: pointer;
   font-size: 2rem;
-  font-weight: bold;
+  font-weight: 900;
+  padding: .4rem;
+  border-radius: 50%;
+  height: 3rem;
+  width: 3rem;
 }
 
 .center {
